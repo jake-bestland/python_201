@@ -4,3 +4,13 @@
 # Do you notice any difference to iterating over the string?
 
 string = "codingnomads"
+print(string)
+
+for word in string:
+    print(word)
+
+string = ("codingnomads", "python", "bootcamp")
+print(string)
+
+for word in ("codingnomads", "python", "bootcamp"):
+    print(word)

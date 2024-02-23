@@ -8,3 +8,6 @@
 from resources import randlist
 
 print(randlist)
+
+randlist.sort()
+print(randlist[-1])
