@@ -11,10 +11,17 @@
 count = 10
 num = []
 while count > 0:
-    user_input = int(input("please enter a number: "))
-    num.append(user_input)
-    count -= 1
-    continue
+    user_input = input("please enter a number: ")
+    if user_input.isdigit():
+        num.append(user_input)
+        count -= 1
+        continue
+    else:
+        print("Sorry, this is not a number, please enter a number.")
+        continue
+        
+        
+        
 print(num)
 
 print(num[1], num[3], num[5], num[7], num[9])  
