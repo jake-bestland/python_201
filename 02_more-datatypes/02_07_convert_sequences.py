@@ -5,3 +5,16 @@
 # - Convert the list back into a tuple.
 
 string = "codingnomads"
+
+
+tup = tuple([string])
+print(tup)
+
+list_str = list(tup)
+print(list_str)
+
+list_str = [string.replace('c', 'k')]
+print(list_str)
+
+tup2 = tuple(list_str)
+print(tup2)
