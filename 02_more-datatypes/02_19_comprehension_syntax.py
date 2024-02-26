@@ -6,3 +6,6 @@
 # but try to do it using a list comprehension.
 
 word = "codingnomads"
+
+lc_word = [x for x in word]
+print(lc_word)
