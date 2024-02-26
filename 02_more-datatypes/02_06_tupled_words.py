@@ -4,3 +4,10 @@
 
 # input = "hello world"
 # result_list = [('h', 'e', 'l', 'l', 'o'), ('w', 'o', 'r', 'l', 'd')]
+
+
+text = input("Please write something herer: ")
+words = text.split()
+
+result_list = [tuple(x) for x in words]
+print(result_list)
