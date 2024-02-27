@@ -22,3 +22,14 @@ office = [
     {"full_name": "Creed Bratton", "item": "mung beans"},
     {"full_name": "Darryl Philbin", "item": "forklift"},
 ]
+
+
+for dict in office:
+    name = dict["full_name"].split()
+    first_name = name[0]
+    last_name = name[1]
+    last_name = last_name.upper()
+    indent = (23 - len(dict["full_name"]))
+    indent2 = len(dict["item"]) + indent
+
+    print(f'{last_name}, {first_name} {dict["item"]: >{indent2}}')
