@@ -4,3 +4,14 @@
 # 2. Use a loop and a second list to solve it more manually
 
 list_ = [1, 2, 3, 4, 3, 4, 5]
+
+list_ = set(list_)
+print(list_)
+
+
+list_ = list(list_)
+for x in list_:
+     if list_.count(x) > 1:
+        list_.remove(x)
+
+print(list_)
