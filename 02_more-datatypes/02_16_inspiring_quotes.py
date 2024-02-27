@@ -16,3 +16,10 @@ famous_quotes = [
     {"full_name": "Nathan Myhrvold", "quote": "Software is a gas; it expands to fill its container."},
     {"full_name": "Alan Bennett", "quote": "Standards are always out of date.  That’s what makes them standards."}
 ]
+
+for dict in famous_quotes:        
+    name = dict["full_name"].split()
+    first_name = name[0]
+    last_name = name[1]
+
+    print(f'"{dict["quote"]}"  - "{last_name}, {first_name}"')
