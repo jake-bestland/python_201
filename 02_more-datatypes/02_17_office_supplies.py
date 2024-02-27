@@ -29,7 +29,6 @@ for dict in office:
     first_name = name[0]
     last_name = name[1]
     last_name = last_name.upper()
-    indent = (23 - len(dict["full_name"]))
-    indent2 = len(dict["item"]) + indent
+    indent = (23 - len(dict["full_name"])) + len(dict["item"])
 
-    print(f'{last_name}, {first_name} {dict["item"]: >{indent2}}')
+    print(f'{last_name}, {first_name} {dict["item"]: >{indent}}')
