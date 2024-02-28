@@ -7,13 +7,13 @@
 string = "codingnomads"
 
 
-tup = tuple([string])
+tup = tuple(string)
 print(tup)
 
 list_str = list(tup)
 print(list_str)
 
-list_str = [string.replace('c', 'k')]
+list_str[list_str.index('c')] = 'k'
 print(list_str)
 
 tup2 = tuple(list_str)
