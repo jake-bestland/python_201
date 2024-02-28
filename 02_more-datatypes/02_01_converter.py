@@ -4,13 +4,12 @@
 # Do you notice any difference to iterating over the string?
 
 string = "codingnomads"
-print(string)
+stringtup = tuple(string)
+print(stringtup)
 
-for word in string:
+
+for word in stringtup:
     print(word)
 
-string = ("codingnomads", "python", "bootcamp")
-print(string)
-
-for word in ("codingnomads", "python", "bootcamp"):
-    print(word)
+for x in string:
+    print(x)
