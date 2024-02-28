@@ -5,11 +5,10 @@
 
 list_ = [1, 2, 3, 4, 3, 4, 5]
 
-list_ = set(list_)
-print(list_)
+list_1 = list(set(list_))
+print(list_1)
 
 
-list_ = list(list_)
 for x in list_:
      if list_.count(x) > 1:
         list_.remove(x)
