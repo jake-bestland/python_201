@@ -17,3 +17,16 @@ from resources import randlist
 print(randlist)
 
 # Write your code below here
+
+randlist.sort()
+print(tuple(randlist))
+
+if len(randlist) % 2 != 0:
+    randlist.append(0)
+
+list_2 = []
+
+for num in range(0, len(randlist), 2):
+    tup1 = (randlist[num], randlist[num + 1])
+    list_2.append(tup1)
+print(list_2)
