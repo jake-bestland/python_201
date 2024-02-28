@@ -21,7 +21,7 @@ while True:
     
     user_input = (input("Please enter a number: "))
     
-    if user_input.isdigit() == False:
+    if not user_input.isdigit():
         print("I'm sorry, that isn't a number.  Try again.")
         continue
     elif user_input in numbers:
