@@ -20,6 +20,6 @@ famous_quotes = [
 for dict in famous_quotes:        
     name = dict["full_name"].split()
     first_name = name[0]
-    last_name = name[1]
+    last_name = name[-1]
 
     print(f'"{dict["quote"]}"  - "{last_name}, {first_name}"')
