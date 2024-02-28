@@ -6,8 +6,8 @@
 # Calculate the product of all of the numbers in the list.
 
 from resources import randlist
-
 print(randlist)
+print(max(randlist))
 
-randlist.sort()
-print(randlist[-1])
+# randlist.sort()
+# print(randlist[-1])
