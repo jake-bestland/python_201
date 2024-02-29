@@ -14,7 +14,7 @@ with word_path.open() as word_file:
         w_list.append(w)
 
 w_list.reverse()
-print("\n".join(w_list))
+#print("\n".join(w_list))
 
 with open("words_reverse.txt", "w") as r_list:
      r_list.write("\n".join(w_list))
