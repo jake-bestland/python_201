@@ -28,3 +28,8 @@ print(counts2[-1])
 #     writer = csv.DictWriter(csvfile, fieldnames=count)
 #     writer.writeheader()
 #     writer.writerow(count)
+
+# with open(file_path.joinpath(), "a") as csvfile:
+    # countwriter = csv.writer(csvfile)
+    # data = [count[""], count[".py"], count[".png"], count[".txt"], count[".csv"]]
+    # countwriter.writerow(data)
