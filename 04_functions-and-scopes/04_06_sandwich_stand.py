@@ -21,5 +21,5 @@ def make_sandwich(bread, *toppings):
     sandwich = f"{bread} bread, {top_list}{bread} bread"
     return sandwich
 
-print(make_sandwich("wheat", "mayo", "mustard", "cheese", "ham", "lettuce", "tomatoe", "pickle"))
+print(make_sandwich("wheat", "mayo", "mustard", "cheese", "ham", "lettuce", "tomato", "pickle"))
     
