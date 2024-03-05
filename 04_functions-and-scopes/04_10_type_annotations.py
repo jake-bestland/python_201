@@ -20,6 +20,6 @@ def greet(greeting: str, name: str) -> str:
     sentence = f"{greeting}, {name}! How are you?"
     return sentence
 
-def shopping_list(*args: list[str]) -> list[str]:
+def shopping_list(*args: str) -> tuple[str, ...]:
     [print(f"* {item}") for item in args]
     return args
