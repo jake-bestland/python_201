@@ -16,9 +16,9 @@ def make_sandwich(bread, *toppings):
 #   and bottom, and the toppings in between.
     """
     top_list = ""
-    for ingredients in toppings:
-        top_list += f"{ingredients}, "
-    sandwich = f"{bread} bread, {top_list}{bread} bread"
+    for ingredient in toppings:
+        top_list += f"* {ingredient}\n"
+    sandwich = f"* {bread} bread\n{top_list}* {bread} bread"
     return sandwich
 
 print(make_sandwich("wheat", "mayo", "mustard", "cheese", "ham", "lettuce", "tomato", "pickle"))
