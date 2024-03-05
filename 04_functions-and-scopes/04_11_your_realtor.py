@@ -4,7 +4,7 @@
 # keyword arguments, and display them all in a list form with some 
 # introductory information.
 
-
+#def features(**kwargs: int) -> str:   #this elims mypy error?
 def features(**kwargs: dict[str, int]) -> str:
     """ Lists Features and their amount.
 
