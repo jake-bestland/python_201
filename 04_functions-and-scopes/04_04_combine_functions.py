@@ -12,7 +12,7 @@ def write_letter(name, text):
     greeting = greet("Hello", name)
     goodbye =  f"Goodbye {name}! I hope to talk to you again soon!"
     message = f"{text}"
-    letter = f"{greeting} {message} {goodbye}"
-    return letter
+    return f"{greeting} {message} {goodbye}"
+    
 
 print(write_letter("Jake", "We should go to a hockey game next weekend!"))

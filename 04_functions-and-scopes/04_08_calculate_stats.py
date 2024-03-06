@@ -19,8 +19,7 @@ def stats(list_of_num):
   min_num = min(list_of_num)
   avg = mean(list_of_num)
   list_sum = sum(list_of_num)
-  values = f"maximum = {max_num}, minimum = {min_num}, average = {avg}, sum = {list_sum}"
-  return values
+  return f"maximum = {max_num}, minimum = {min_num}, average = {avg}, sum = {list_sum}"
 
 # call the function below here
 print(stats(example_list))
