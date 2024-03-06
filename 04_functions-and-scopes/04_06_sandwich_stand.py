@@ -9,7 +9,7 @@ def make_sandwich(bread, *toppings):
 
     Args:
         bread (str): the bread to use for the top and bottom of sandwich, e.g., "wheat"
-        toppings (str): the ingredients to be put into the sandwich
+        toppings (* str): comma seperated list of ingredients to be put into the sandwich
 
     Returns:
         str: a sandwich with the bread on top
