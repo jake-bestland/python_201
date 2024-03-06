@@ -10,7 +10,7 @@ from pathlib import Path
 
 word_path = Path("/Users/jakebestland/Documents/codingnomads/python-201-main/03_file-input-output/words.txt")
 
-short = 5
+short = 100
 short_word = []
 long = 0
 long_word = []
