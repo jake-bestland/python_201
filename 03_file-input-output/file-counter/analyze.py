@@ -10,12 +10,11 @@ for filepath in desktop.iterdir():
     desk_files.append(filepath.suffix)
 
 count = {x: desk_files.count(x) for x in desk_files}
-print(count)
 
 with open("filecounts.csv", "r") as csvfile:
     reader = csv.DictReader(csvfile, fieldnames=["Folder", "PY", "PNG", "TXT", "CSV"])
     counts2 = list(reader)
-print(counts2[-1])
+print(counts2)
 
 
 
