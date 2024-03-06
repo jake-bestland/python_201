@@ -17,12 +17,8 @@ def div_4_or_7(number):
     Returns:
         bool: a true or false value
     """
-    correct = True
-    if number % 4 == 0 or number % 7 ==0:
-        answer = correct
-    else:
-        answer = not correct
-    return answer
+    return number % 4 == 0 or number % 7 ==0
+    
 
 def div_both_4_7(number):
     """check if a number is divisible by both 4 and 7.
@@ -33,12 +29,8 @@ def div_both_4_7(number):
     Returns:
         bool: a true or false value
     """
-    correct = True
-    if number % 4 == 0 and number % 7 == 0:
-        answer = correct
-    else:
-        answer = not correct
-    return answer
+    return number % 4 == 0 and number % 7 == 0
+    
 
 while True:
     user_num = input("Select a number between 1 and 1,000,000,000: ")
