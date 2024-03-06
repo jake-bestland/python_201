@@ -8,28 +8,27 @@ import csv
 desktop = Path("/Users/jakebestland/Desktop")
 
 desk_files = []
-
 for filepath in desktop.iterdir():
     desk_files.append(filepath.suffix)
 
 count = {x: desk_files.count(x) for x in desk_files}
-print(count)
 
-file_path = Path("/Users/jakebestland/Desktop/filecounts.csv")
+csvfile_path = Path("/Users/jakebestland/Desktop/filecounts.csv")
 
-with file_path.open() as csvfile:
+### This will print a header row with suffix of each file, followed by the values on new row ###
+with open(csvfile_path.joinpath(), "a") as csvfile:
+    writer = csv.DictWriter(csvfile, fieldnames=count)
+    writer.writeheader()
+    writer.writerow(count)
+
+### This will just print the count
+# with open(csvfile_path.joinpath(), "a") as csvfile:
+#     countwriter = csv.writer(csvfile)
+#     data = [count[".py"], count[""], count[".png"], count[".txt"], count[".csv"]]
+#     countwriter.writerow(data)
+
+with csvfile_path.open() as csvfile:
     reader = csv.DictReader(csvfile, fieldnames=["PY", "Folder", "PNG", "TXT", "CSV"])
     counts2 = list(reader)
-print(counts2)
-print(counts2[-1])
-
-
-# with open(file_path.joinpath(), "a") as csvfile:
-#     writer = csv.DictWriter(csvfile, fieldnames=count)
-#     writer.writeheader()
-#     writer.writerow(count)
-
-# with open(file_path.joinpath(), "a") as csvfile:
-    # countwriter = csv.writer(csvfile)
-    # data = [count[""], count[".py"], count[".png"], count[".txt"], count[".csv"]]
-    # countwriter.writerow(data)
+#print(counts2) #prints all
+print(counts2[-1]) #prints most recent
