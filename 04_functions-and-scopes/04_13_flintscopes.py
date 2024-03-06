@@ -13,9 +13,11 @@
 ###################################
 
 def shout(name):
-    loud_name = name.upper()
-    return loud_name
+    return name.upper()
+
 
 
 yell = shout("wilma")
 print(yell)
+
+#print(shout("wilma")) is more efficient
