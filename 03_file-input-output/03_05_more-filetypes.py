@@ -14,15 +14,23 @@ for filepath in desktop.iterdir():
     desk_files.append(filepath.suffix)
 
 count = {x: desk_files.count(x) for x in desk_files}
-print(count)
+#print(count)
 
 file_path = Path("/Users/jakebestland/Desktop/filecounts.csv")
 
-## added ".html" and ".jpg" to filecounter ##
+#### this will write the suffix for each item on a row above each count ####
+### Therefore do not need to choose which files need to be recorded ###
 with open(file_path.joinpath(), "a") as csvfile:
-    countwriter = csv.writer(csvfile)
-    data = [count[".py"], count[""], count[".png"], count[".txt"], count[".csv"], count[".html"], count[".jpg"]]
-    countwriter.writerow(data)
+    writer = csv.DictWriter(csvfile, fieldnames=count)
+    writer.writeheader()
+    writer.writerow(count)
+
+
+# ## added ".html" and ".jpg" to filecounter ##
+# with open(file_path.joinpath(), "a") as csvfile:
+#     countwriter = csv.writer(csvfile)
+#     data = [count[".py"], count[""], count[".png"], count[".txt"], count[".csv"], count[".html"], count[".jpg"]]
+#     countwriter.writerow(data)
 
 ## added html and jpg
 with file_path.open() as csvfile:
@@ -30,11 +38,3 @@ with file_path.open() as csvfile:
     counts2 = list(reader)
 #print(counts2)
 print(counts2[-1])
-
-
-#### this will write the suffix for each item on a row above each count ####
-
-# with open(file_path.joinpath(), "a") as csvfile:
-#     writer = csv.DictWriter(csvfile, fieldnames=count)
-#     writer.writeheader()
-#     writer.writerow(count)
