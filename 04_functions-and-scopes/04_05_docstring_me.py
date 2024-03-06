@@ -10,7 +10,7 @@ def km_to_miles(km):
         km (int): the distance in kilometers to be converted into miles
 
     Returns:
-        miles (int): the distance in miles
+        (int): the distance in miles
     """
     miles = km * 0.6
     return miles
