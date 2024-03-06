@@ -27,8 +27,9 @@ with open(csvfile_path.joinpath(), "a") as csvfile:
 #     data = [count[".py"], count[""], count[".png"], count[".txt"], count[".csv"]]
 #     countwriter.writerow(data)
 
+
 with csvfile_path.open() as csvfile:
-    reader = csv.DictReader(csvfile, fieldnames=["PY", "Folder", "PNG", "TXT", "CSV"])
+    reader = csv.DictReader(csvfile, fieldnames=[x for x in count.keys()])
     counts2 = list(reader)
 #print(counts2) #prints all
 print(counts2[-1]) #prints most recent

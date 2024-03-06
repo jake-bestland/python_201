@@ -34,7 +34,7 @@ with open(file_path.joinpath(), "a") as csvfile:
 
 ## added html and jpg
 with file_path.open() as csvfile:
-    reader = csv.DictReader(csvfile, fieldnames=["PY", "Folder", "PNG", "TXT", "CSV", "HTML", "JPG"])
+    reader = csv.DictReader(csvfile, fieldnames=[x for x in count.keys()])
     counts2 = list(reader)
 #print(counts2)
 print(counts2[-1])

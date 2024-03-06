@@ -12,7 +12,7 @@ for filepath in desktop.iterdir():
 count = {x: desk_files.count(x) for x in desk_files}
 
 with open("filecounts.csv", "r") as csvfile:
-    reader = csv.DictReader(csvfile, fieldnames=["Folder", "PY", "PNG", "TXT", "CSV"])
+    reader = csv.DictReader(csvfile, fieldnames=[x for x in count.keys()])
     counts2 = list(reader)
 print(counts2)
 
