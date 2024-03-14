@@ -1,7 +1,7 @@
 # Write a lambda expression that takes in three numbers
 # and returns the sum of the numbers.
 
-sum1 = (lambda a, b, c: a + b + c)
+sum1 = lambda a, b, c: a + b + c
 print(sum1(1, 2, 3))
 
 #or
