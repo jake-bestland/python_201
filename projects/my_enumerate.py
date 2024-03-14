@@ -15,3 +15,9 @@ months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct
 # print(list(my_enumerate(months, 1)))
 for index, months in my_enumerate(months, 1):
     print(f"{index}: {months}")
+
+
+# courses = ['Intro', 'Intermediate', 'Advanced', 'Professional']
+
+# for index, course in my_enumerate(courses, 100):
+#     print(f"{index}: {course} Python")
