@@ -1,6 +1,8 @@
 # Add the code for the file counter script that you wrote in the course.
 from pathlib import Path
 import csv
+from datetime import date
+
 
 desktop = Path("/Users/jakebestland/Desktop")
 
@@ -10,6 +12,8 @@ for filepath in desktop.iterdir():
     desk_files.append(filepath.suffix)
 
 count = {x: desk_files.count(x) for x in desk_files}
+today = date.today()
+count['updated on'] = today.strftime("%m/%d/%Y")
 print(count)
 
 
@@ -28,4 +32,4 @@ with open(csvfile_path.joinpath(), "a") as csvfile:
 with csvfile_path.open() as csvfile:
     reader = csv.DictReader(csvfile, fieldnames=[x for x in count.keys()])
     counts2 = list(reader)
-print(counts2)
+print(counts2[-1])
