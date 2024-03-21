@@ -3,7 +3,7 @@ import sqlalchemy
 
 desktop = Path("/Users/jakebestland/Desktop")
 
-engine = sqlalchemy.create_engine('mysql+pymysql://root:GuttersRule!5@localhost/desk_file_count')
+engine = sqlalchemy.create_engine('mysql+pymysql://root:password@localhost/desk_file_count')
 connection = engine.connect()
 metadata = sqlalchemy.MetaData()
 
@@ -15,5 +15,3 @@ for filepath in desktop.iterdir():
     result_proxy = connection.execute(query,new_records)
 
 connection.commit()
-
-
