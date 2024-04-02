@@ -14,13 +14,6 @@
 # 999: [1, 1, 1, 1, 1, 0, 0, 1, 1, 1]}
 
 
-num_dict = {i: [int(x) for x in list(str(i))] for i in range(999)}
+num_dict = {i: [int(x) for x in list(str(i))] for i in range(1000)}
 print(num_dict)
 
-
-
-# for i in range(999):
-#     digits = list(str(i))
-#     #print(digits)
-#     i_dig = [int(x) for x in list(str(i))]
-#     print(i_dig)
