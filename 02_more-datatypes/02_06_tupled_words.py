@@ -6,7 +6,7 @@
 # result_list = [('h', 'e', 'l', 'l', 'o'), ('w', 'o', 'r', 'l', 'd')]
 
 
-text = input("Please write something herer: ")
+text = input("Please write something here: ")
 words = text.split()
 
 result_list = [tuple(x) for x in words]
